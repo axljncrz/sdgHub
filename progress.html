@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Volunteer Progress Tracker</title>
+  <link rel="stylesheet" href="progress.css" />
+</head>
+
+<body>
+
+  <!-- Main container for the user’s profile and badges -->
+  <div class="profile-card">
+    <button id="backButton" class="close-btn" aria-label="Go back">×</button>
+    <div class="user-header">
+      <div class="avatar">JS</div>
+      <div class="user-details">
+        <h1>Jane Smith</h1>
+        <div class="badge-indicator">
+          <div class="badge-icon">
+            <img src="imgs/drive-download/Badge4.png" alt="Commited Volunteer" class="badge-icon-img" style="margin-left:20px;" />
+          </div>
+          <span class="status">SDG Advocate</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- Section that lists all earned and in-progress badges -->
+    <div class="badges-section">
+      <h2>Earned Badges</h2>
+
+      <!-- Controls to filter which badges to show -->
+      <div class="filter-bar">
+        <label for="statusFilter">Show:</label>
+        <select id="statusFilter">
+          <option value="all">All</option>
+          <option value="earned">Earned</option>
+          <option value="in-progress">In Progress</option>
+        </select>
+      </div>
+
+      <!-- Container that holds rows of badge items -->
+      <div class="badges-container">
+
+        <!-- First row of badges -->
+        <div class="badges-row">
+
+          <!-- 1st badge info -->
+          <div class="badge-item visible">
+            <div class="badge-status earned">Earned</div>
+            <div class="badge-content">
+              <div class="badge-icon">
+                <img src="imgs/drive-download/Badge1.png" alt="Starter Badge" class="badge-icon-img" />
+              </div>
+              <div class="badge-details">
+                <h3>Project Initiator</h3>
+                <p>Complete your 1st SDG project</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- 2nd badge info -->
+          <div class="badge-item visible">
+            <div class="badge-status earned">Earned</div>
+            <div class="badge-content">
+              <div class="badge-icon">
+                <img src="imgs/drive-download/Badge2.png" alt="Active Volunteer" class="badge-icon-img" />
+              </div>
+              <div class="badge-details">
+                <h3>Commited Volunteer</h3>
+                <p>Complete 5 projects</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- 3rd badge info -->
+          <div class="badge-item visible">
+            <div class="badge-status in-progress">In Progress</div>
+            <div class="badge-content">
+              <div class="badge-icon">
+                <img src="imgs/drive-download/Badge3.png" alt="Impact leader" class="badge-icon-img" />
+              </div>
+              <div class="badge-details">
+                <h3>Impact Leader</h3>
+                <p>Complete 10 projects across 3+ SDGs</p>
+                <div class="badge-progress">
+                  <div class="progress-bar-mini">
+                    <div class="progress-fill blue"></div>
+                  </div>
+                  <p><span>6/10</span> projects – 4 more needed</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+        </div> <!-- end row 1 -->
+
+        <!-- Second row of badges -->
+        <div class="badges-row">
+
+          <!-- 4th badge info -->
+          <div class="badge-item visible">
+            <div class="badge-status earned">Earned</div>
+            <div class="badge-content">
+              <div class="badge-icon">
+                <img src="imgs/drive-download/Badge4.png" alt="SDG Advocate" class="badge-icon-img" />
+              </div>
+              <div class="badge-details">
+                <h3>SDG Advocate</h3>
+                <p>Complete a project for at least 5 different SDGs</p>
+                <div class="badge-progress">
+                  <div class="progress-bar-mini">
+                    <div class="progress-fill green"></div>
+                  </div>
+                  <p><span>6/5</span> SDGs covered (Earned!)</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- 5th badge info -->
+          <div class="badge-item visible">
+            <div class="badge-status in-progress">In Progress</div>
+            <div class="badge-content">
+              <div class="badge-icon">
+                <img src="imgs/drive-download/Badge5.png" alt="SDG Ambassador" class="badge-icon-img" />
+              </div>
+              <div class="badge-details">
+                <h3>SDG Ambassador</h3>
+                <p>Complete 17+ projects (one for each SDG)</p>
+                <div class="badge-progress">
+                  <div class="progress-bar-mini">
+                    <div class="progress-fill purple"></div>
+                  </div>
+                  <p><span>6/17</span> SDGs – 11 more to cover</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+        </div> <!-- end row 2 -->
+
+      </div>
+    </div>
+
+  </div>
+
+  <script src="progress.js"></script>
+</body>
+
+</html>
